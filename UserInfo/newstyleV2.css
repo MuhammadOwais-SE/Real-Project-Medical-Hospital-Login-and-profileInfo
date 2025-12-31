@@ -1,0 +1,265 @@
+/* =========================================
+   1. VARIABLES & RESET
+   ========================================= */
+:root {
+    /* --- Brand Palette (Medical Teal & Slate) --- */
+    /* Primary (Teal/Cyan) */
+    --color-primary: #0ea5e9;
+    /* Sky 500 */
+    --color-primary-dark: #0284c7;
+    /* Sky 600 */
+    --color-primary-light: #e0f2fe;
+    /* Sky 100 */
+    --color-primary-soft: #bae6fd;
+    /* Sky 200 */
+
+    /* Secondary (Slate/Navy) */
+    --color-secondary: #0f172a;
+    /* Slate 900 */
+    --color-secondary-light: #f1f5f9;
+    /* Slate 100 */
+
+    /* Accents (Soft Dashboard Colors) */
+    --color-blue-50: #eff6ff;
+    --color-blue-500: #3b82f6;
+
+    --color-purple-50: #faf5ff;
+    --color-purple-500: #a855f7;
+
+    --color-green-50: #f0fdf4;
+    --color-green-500: #22c55e;
+
+    --color-orange-50: #fff7ed;
+    --color-orange-500: #f97316;
+
+    /* Base Colors */
+    --bg-body: #f8fafc;
+    /* Cool light gray/white */
+    --bg-surface: #ffffff;
+    --border-color: #e2e8f0;
+    /* Slate 200 */
+    --text-primary: #1e293b;
+    /* Slate 800 */
+    --text-secondary: #64748b;
+    /* Slate 500 */
+    --text-muted: #94a3b8;
+    /* Slate 400 */
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+}
+
+/* =========================================
+     2. UTILITIES & TYPOGRAPHY
+     ========================================= */
+.text-primary-dark {
+    color: var(--color-primary-dark);
+}
+
+.text-muted {
+    color: var(--text-secondary) !important;
+}
+
+.x-small-text {
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.micro-text {
+    font-size: 0.775rem;
+}
+
+.fw-medium {
+    font-weight: 500 !important;
+}
+
+.fw-semibold {
+    font-weight: 600 !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.bg-light-subtle {
+    background-color: var(--color-secondary-light) !important;
+}
+
+/* Icon Colored Backgrounds */
+.bg-blue-50 {
+    background-color: var(--color-blue-50);
+}
+
+.text-blue-500 {
+    color: var(--color-blue-500);
+}
+
+.bg-purple-50 {
+    background-color: var(--color-purple-50);
+}
+
+.text-purple-500 {
+    color: var(--color-purple-500);
+}
+
+.bg-green-50 {
+    background-color: var(--color-green-50);
+}
+
+.text-green-500 {
+    color: var(--color-green-500);
+}
+
+.bg-orange-50 {
+    background-color: var(--color-orange-50);
+}
+
+.text-orange-500 {
+    color: var(--color-orange-500);
+}
+
+/* =========================================
+     3. COMPONENTS
+     ========================================= */
+
+/* Navbar */
+.glass-navbar {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Profile Pic */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid var(--bg-surface);
+}
+
+/* Icons */
+.icon-box {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.icon-box:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-primary-soft {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-primary-soft:hover {
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.btn-icon:hover {
+    background-color: var(--color-primary-light);
+    transform: translateY(-2px);
+}
+
+/* Hover Scale Effect */
+.hover-scale {
+    transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.1);
+}
+
+/* Table Styling */
+.custom-table th {
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.custom-table td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.custom-table tr:hover td {
+    background-color: var(--color-secondary-light);
+}
+
+.custom-table tr:last-child td {
+    border-bottom: 0;
+}
+
+/* Checkbox Customization (Optional simple override) */
+.form-check-input:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* Pagination */
+.page-link.active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+.page-link {
+    color: var(--text-secondary);
+}
+
+/* Modal */
+.modal-backdrop.show {
+    opacity: 0.3;
+    /* Lighter Backdrop */
+    backdrop-filter: blur(2px);
+}
+
+.form-floating>.form-control {
+    border-color: var(--border-color);
+}
+
+.form-floating>.form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.15);
+}
+
+/* =========================================
+     4. RESPONSIVE
+     ========================================= */
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+}

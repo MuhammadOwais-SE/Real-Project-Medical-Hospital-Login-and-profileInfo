@@ -1,104 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <!-- Include Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="loader"></div>
-    <div class="h-100 d-flex justify-content-center align-items-end">
-      <div class="mircoScope-ball balloonEffect1 relative"></div>
-      <div class="doctorScope-ball balloonEffect1 relative"></div>
-      <div class="container login-container">
-        <div class="row justify-content-center">
-          <div class=" col-12 col-sm-10 col-md-7  col-lg-6">
-            <div class="card relative bg-card rounded-5 py-lg-5 py-md-5 py-sm-5 py-3 px-1 px-sm-4 px-md-5 px-lg-5">
-              <div class="card-body py-5 px-4">
-                <div class="col text-center">
-                  <img
-                    src="../Assets/Images/report.png"
-                    width="70vw"
-                    alt="Report"
-                  />
-                </div>
-                <h2
-                  class="fw-bolder card-title text-center text-white fs-2 py-3"
-                >
-                  Reports
-                </h2>
-                <form class="form-container">
-                  <div class="form-group">
-                    <input
-                      autocomplete="off"
-                      type="text"
-                      placeholder="Enter Username"
-                      class="form-control"
-                      id="username"
-                      required
-                    />
-                  </div>
-                  <div class="form-group py-3">
-                    <input
-                      type="password"
-                      placeholder="Enter Password"
-                      class="form-control"
-                      id="password"
-                      required
-                    />
-                  </div>
-                  <button type="submit" class="btn login-btn btn-block">
-                    Login
-                  </button>
-                </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="loader"></div>
+  <div class="h-100 d-flex justify-content-center align-items-end">
+    <div class="mircoScope-ball balloonEffect1 relative"></div>
+    <div class="doctorScope-ball balloonEffect1 relative"></div>
+    <div class="container login-container">
+      <div class="row justify-content-center">
+        <div class=" col-12 col-sm-10 col-md-7  col-lg-6">
+          <div class="card relative bg-card rounded-5 py-lg-5 py-md-5 py-sm-5 py-3 px-1 px-sm-4 px-md-5 px-lg-5">
+            <div class="card-body py-5 px-4">
+              <div class="col text-center">
+                <img src="../Assets/Images/report.png" width="70vw" alt="Report" />
               </div>
+              <h2 class="fw-bolder card-title text-center text-white fs-2 py-3">
+                Reports
+              </h2>
+              <form class="form-container">
+                <div class="form-group">
+                  <input autocomplete="off" type="text" placeholder="Enter Username" class="form-control" id="username"
+                    required />
+                </div>
+                <div class="form-group py-3">
+                  <input type="password" placeholder="Enter Password" class="form-control" id="password" required />
+                </div>
+                <button type="submit" class="btn login-btn btn-block">
+                  Login
+                </button>
+              </form>
             </div>
           </div>
           <div class="heart-line relative"></div>
         </div>
+      </div>
 
-        <div class="text-white text-center mt-3">
-          <div class="fw-medium text-shadow-medium">
-            In case there is an issue, please contact us
-            <div class="text-sm block text-white fst-italic pb-3">
-              <img
-                src="../Assets/Icons/whatsapp.svg"
-                width="24vw"
-                alt="whatsApp"
-              />
-              WhatsApp:
-              <span class="fw-bolder text-wide"> 
-                0318-6624624
-              </span> (NMC-Info)
-            </div>
+      <div class="text-white text-center mt-3">
+        <div class="fw-medium text-shadow-medium">
+          In case there is an issue, please contact us
+          <div class="text-sm block text-white fst-italic pb-3">
+            <img src="../Assets/Icons/whatsapp.svg" width="24vw" alt="whatsApp" />
+            WhatsApp:
+            <span class="fw-bolder text-wide">
+              0318-6624624
+            </span> (NMC-Info)
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
 
-    
-    <div class="bg-img"></div>
-    <footer class="bg-danger py-3 text-center">
-      <div class="text-white fs-4">
-        All Rights Reserved || Medical Hospital & Clinics  
-        <!-- Medical Nation Hospital -->
-      </div>
-    </footer>
-    <script src="app.js"></script>
-  </body>
+
+  <div class="bg-img"></div>
+  <footer class="bg-danger py-3 text-center">
+    <div class="text-white fs-4">
+      All Rights Reserved || Medical Hospital & Clinics
+      <!-- Medical Nation Hospital -->
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
 </html>

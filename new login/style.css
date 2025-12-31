@@ -4,11 +4,12 @@
 }
 
 body {
-  background-color: #2c2c2c;
+  background-color: #1a1a1a;
   height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-family: 'Poppins', sans-serif;
 }
 
 #loader {
@@ -64,10 +65,12 @@ body {
 }
 
 @keyframes balloons1 {
+
   0%,
   100% {
     transform: translate(0px) rotate(-8deg) scale(80%);
   }
+
   50% {
     transform: translateY(-1px) rotate(6deg);
   }
@@ -93,44 +96,74 @@ body {
   background-position: center;
   position: fixed;
 
-  height: 100hv;
+  height: 85vh;
   object-fit: cover;
   bottom: 0%;
   left: 0%;
   right: 0%;
   top: 20%;
   z-index: 4;
+  pointer-events: none;
+  /* Prevent blocking clicks */
 }
 
 .login-container {
   width: 100%;
   height: auto;
-  min-height: 80vh; 
+  min-height: 80vh;
   padding-bottom: 10vh;
+}
+
+/* Modern Input Styles */
+.form-control {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white !important;
+  border-radius: 8px;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ff6868;
+  box-shadow: 0 0 15px rgba(255, 104, 104, 0.2);
+  outline: none;
 }
 
 .login-btn {
   color: white;
   border: none;
-  background: linear-gradient(to left, transparent, #f81e1e, #f81e1e);
-  transition: transform 0.6s ease;
+  background: linear-gradient(135deg, #ff4d4d, #c90a0a);
+  transition: all 0.4s ease;
   transform: translateY(0px);
   z-index: 4;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
 }
 
 .login-btn:hover {
   color: white;
-  border: white 1px solid;
-  background: linear-gradient(to right, #ff2323, #ff8d8d);
-  transition: transform 0.9s ease;
-  transform: translateY(-5px);
+  background: linear-gradient(135deg, #ff6b6b, #e61919);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 77, 77, 0.5);
 }
 
+/* Glassmorphism Card */
 .bg-card {
-  background: linear-gradient(#57040444, transparent, #ff020279, #f88181);
-  border: none;
-
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 20px !important;
 }
 
 .form-container {
@@ -274,7 +307,7 @@ footer {
   }
 
   .heart-line {
-    top: 35vh;
+    top: 25vh;
   }
 }
 
